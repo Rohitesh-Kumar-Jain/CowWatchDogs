@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}  Title {% endblock %}</title>
+
+    <link rel="stylesheet" href="{{url_for('static', filename='CWD.css')}}" />
+    {% block head %}
+
+    {% endblock %}
+
+</head>
+<body>
+
+{% block content %}
+
+{% endblock %}
+
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+
+            <p>This is the (currently experimental) web site for the Cow Watch Dogs
+                (<a href="https://github.com/Rohitesh-Kumar-Jain/CowWatchDogs"
+                    target="_blank" style="text-decoration: none; color:
+     black;">source <i class="fa fa-github"></i></a>)
+                <br>Questions, comments and kudos to <a href='mailto:codepool20@gmail.com'>Rohitesh Kumar Jain</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
