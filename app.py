@@ -1,5 +1,5 @@
-from flask import Flask, render_template, abort, url_for
-from
+from flask import Flask, render_template, abort, url_for, flash, redirect
+from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '0342cf57e6fb58ee2634f555ab2485c2'
@@ -26,6 +26,30 @@ def details(cow_name):
     if cow is None:
         abort(404, description="No cow was Found with the given ID")
     return render_template("details.html", cow_name=cow_name, cow=cow)
+
+@app.route("/register", methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'Account created for {form.username.data}!', 'success')
+        return redirect(url_for('welcome'))
+    return render_template('register.html', title='Register', form=form)
+
+
+@app.route("/login", methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        if form.email.data == 'admin@blog.com' and form.password.data == 'password':
+            flash('You have been logged in!', 'success')
+            return redirect(url_for('welcome'))
+        else:
+            flash('Login Unsuccessful. Please check username and password', 'danger')
+    return render_template('login.html', title='Login', form=form)
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', 8085, debug=True, use_debugger=False, use_reloader=False, passthrough_errors=True)
