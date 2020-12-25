@@ -1,0 +1,6 @@
+To push to github use: git push -u origin main
+
+To run in the degub mode use the following commands:
+1)export FLASK_APP=app.py
+2)export FLASK_ENV=development
+3)flask run --port 8085

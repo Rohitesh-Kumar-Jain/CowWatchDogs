@@ -1,0 +1,16 @@
+{% extends "CWD.html" %}
+
+{% block title %}
+    {{cow["name"]}}'s Details - CowWatchDogs
+{% endblock %}
+
+{% block content %}
+
+    <p>This is a cow details section of {{ cow_name }}</p>
+    <div style="float:left; margin:10px;">
+        <h1 class="title">{{ cow["name"] }}</h1>
+        <p><b>Age: &nbsp;</b> {{cow["age"]}}</p>
+        <p><b>Story: &nbsp;</b> {{cow["story"]}}</p>
+    </div>
+
+{% endblock %}

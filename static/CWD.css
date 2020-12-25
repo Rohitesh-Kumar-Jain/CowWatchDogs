@@ -1,5 +1,7 @@
 body {
     background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+    color: #333333;
+    margin-top: 5rem;
 }
 
 #footer {
@@ -16,3 +18,38 @@ display:block;
 overflow:hidden;
 clear:both;
 }
+
+table {
+    width: 100%;
+    text-align: center;
+}
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+
+
+/* Go this CSS for some where */
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+.bg-steel {
+  background-color: #5f788a;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+
+/*  The above CSS is taken from somewhere */
