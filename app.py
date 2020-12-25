@@ -1,6 +1,9 @@
 from flask import Flask, render_template, abort, url_for
+from
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '0342cf57e6fb58ee2634f555ab2485c2'
+
 
 cows = [
     {"id": 1, "name": "Nandni", "age": "5 years",
