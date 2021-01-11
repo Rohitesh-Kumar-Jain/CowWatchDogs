@@ -9,6 +9,7 @@ Contribute in the form of documentation.
 
 Tech Stack:
 * Flask
+* SQLite
 * JavaScript
 * CSS
 * HTML
