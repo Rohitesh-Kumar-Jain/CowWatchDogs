@@ -1,0 +1,7 @@
+__pycache__/
+
+#local files
+CWD/
+
+#Mac OS hidden files
+.DS_Store
