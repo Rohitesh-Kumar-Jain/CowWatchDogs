@@ -1,0 +1,28 @@
+{% extends "CWD.html" %}
+
+{% block title %}
+Welcome
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to the Cow Watch Dogs</h1>
+<p>Welcome to our mission of saving Cows and animals</p>
+    <p>Gau Bacho Gau Charao </p>
+
+    <table>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Story</th>
+    </tr>
+    {% for cow in cows %}
+    <tr>
+      <td>{{ cow["name"] }}</td>
+      <td>{{ cow["age"] }}</td>
+      <td>{{ cow["story"] }}</td>
+    </tr>
+    {% endfor %}
+    </table>
+
+
+{% endblock %}
