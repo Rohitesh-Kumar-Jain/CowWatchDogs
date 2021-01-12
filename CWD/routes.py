@@ -1,7 +1,7 @@
 from flask import render_template, abort, url_for, flash, redirect
-from cwd import app
-from cwd.forms import RegistrationForm, LoginForm
-from cwd.models import User,Cow
+from CWD import app
+from CWD.forms import RegistrationForm, LoginForm
+from CWD.models import User,Cow
 
 cows = [
     {"id": 1, "name": "Nandni", "age": "5 years",
