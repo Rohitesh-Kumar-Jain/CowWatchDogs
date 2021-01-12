@@ -5,9 +5,9 @@
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/CWD" />
+      <excludeFolder url="file://$MODULE_DIR$/cwd" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (CowWatchDogs)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (CowWatchDogs)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">

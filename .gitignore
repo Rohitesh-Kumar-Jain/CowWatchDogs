@@ -3,5 +3,11 @@ __pycache__
 
 
 # local files
-CWD
+cwd-env
 .idea
+.DS_Store
+.DS_Store
+.idea/CowWatchDogs.iml
+.idea/misc.xml
+
+
