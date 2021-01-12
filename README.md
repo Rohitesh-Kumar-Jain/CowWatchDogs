@@ -8,7 +8,7 @@ animals.
 Contribute in the form of documentation. 
 
 Tech Stack:
-* Flask
+* Flask (WTForms, Flask-SQLAlchemy, Jinja2)
 * SQLite
 * JavaScript
 * CSS

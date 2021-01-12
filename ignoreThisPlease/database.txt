@@ -1,0 +1,29 @@
+start by running the command:
+$ from app import db
+
+And the below command will create a db:
+$ db.create_all()
+
+after that, you can enter data in the project by importing your classes, eg:
+$ from app import User, Cow
+
+Now let's see how a sample data entry looks like  :)
+$ user_1=User(username ='Kumar', email='loveanimals@gmail.com', password='password')
+$ db.session.add(user_1)
+$ db.session.commit()
+
+
+Basic Alchemy Queries:
+$ User.query.all()
+
+$ User.query.first()
+
+$ User.query.filter_by(username='Kumar').all()
+
+$ user = User.query.get(1)       // gets the user with the specified Id
+
+
+To drop/clean the database:
+$ db.drop_all()
+
+
