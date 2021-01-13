@@ -1,5 +1,5 @@
 from flask import render_template, abort, url_for, flash, redirect
-from CWD import app
+from CWD import app,db, bcrypt
 from CWD.forms import RegistrationForm, LoginForm
 from CWD.models import User,Cow
 
@@ -29,8 +29,12 @@ def details(cow_name):
 def register():
     form = RegistrationForm()
     if form.validate_on_submit():
+        hashed_password = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
+        user = User(username=form.username.data, email=form.email.data, password=hashed_password)
+        db.session.add(user)
+        db.session.commit()
         flash(f'Account created for {form.username.data}!', 'success')
-        return redirect(url_for('welcome'))
+        return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
 
